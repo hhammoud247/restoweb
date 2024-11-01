@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resto</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Welcome to Resto</h1>
+    </div>
+
+    <nav>
+        <button onclick="showSection('menu')">Menu</button>
+        <button onclick="showSection('reserve')">Reserve a Table</button>
+        <button onclick="showSection('takeaway')">Takeaway</button>
+    </nav>
+
+    <section id="menu" class="content-section hidden">
+        <h2>Menu</h2>
+        <p>Select items:</p>
+        <div id="menuList"></div>
+        <button onclick="callWaiter()">Call Waiter</button>
+        <button onclick="confirmSelection('menuList')">Confirm Selection</button>
+    </section>
+
+    <section id="reserve" class="content-section hidden">
+        <h2>Reserve a Table</h2>
+        <p>Select a table:</p>
+        <ul id="tableList">
+            <li><input type="checkbox" value="Table 1"> Table 1</li>
+            <li><input type="checkbox" value="Table 2"> Table 2</li>
+            <li><input type="checkbox" value="Table 3"> Table 3</li>
+        </ul>
+        <button onclick="reserveTable()">Reserve</button>
+    </section>
+
+    <section id="takeaway" class="content-section hidden">
+        <h2>Takeaway</h2>
+        <p>Select items for takeaway:</p>
+        <div id="takeawayList"></div>
+        <button onclick="sendReceipt()">Send Receipt</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Resto. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
